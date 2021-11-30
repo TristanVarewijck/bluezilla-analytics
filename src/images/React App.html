@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:3001/Market -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" href="http://localhost:3001/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="http://localhost:3001/logo192.png">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3001/manifest.json">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+<style>@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);</style><style>/* imports */
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif; }
+
+ol {
+  list-style-type: none;
+  padding: 0; }
+
+body {
+  background-color: #f4f8f9;
+  /* content container */
+  /* currency component */ }
+  body p {
+    margin: 0;
+    padding: 0; }
+  body button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit; }
+  body header {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    background-color: #ffff; }
+    body header a img {
+      width: 135px;
+      height: auto; }
+  body .menu {
+    background-color: #ffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 1;
+    animation: slideLeft 0.2s ease-in-out; }
+    body .menu p {
+      margin: 0;
+      padding: 0;
+      margin: 30px 0 0 30px;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: 600; }
+    body .menu img {
+      position: absolute;
+      bottom: 25%;
+      left: 30px;
+      width: 135px;
+      height: auto; }
+    body .menu ol {
+      position: absolute;
+      list-style-type: none;
+      top: 15%;
+      left: 30px;
+      height: 30%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      body .menu ol li {
+        list-style-type: none;
+        font-weight: 600; }
+      body .menu ol li:hover {
+        opacity: 0.8;
+        color: #1888fb;
+        transition: 0.2s ease-in-out; }
+      body .menu ol li:first-of-type::before {
+        content: " ";
+        background: url(/static/media/analytics.1b772418.svg) no-repeat;
+        background-size: 25px auto;
+        background-position: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 10%;
+        margin-right: 1em;
+        width: 40px;
+        height: 40px;
+        background-color: #e8eef2; }
+      body .menu ol li:nth-of-type(2)::before {
+        content: " ";
+        background: url(/static/media/market.e82896a0.svg) no-repeat;
+        background-size: 25px auto;
+        background-position: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 10%;
+        margin-right: 1em;
+        width: 40px;
+        height: 40px;
+        background-color: #e8eef2; }
+      body .menu ol li:nth-of-type(3)::before {
+        content: " ";
+        background: url(/static/media/news.c9e1e425.svg) no-repeat;
+        background-size: 25px auto;
+        background-position: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 10%;
+        margin-right: 1em;
+        width: 40px;
+        height: 40px;
+        background-color: #e8eef2; }
+      body .menu ol li:nth-of-type(4)::before {
+        content: " ";
+        background: url(/static/media/forum.a1169baf.svg) no-repeat;
+        background-size: 25px auto;
+        background-position: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 10%;
+        margin-right: 1em;
+        width: 40px;
+        height: 40px;
+        background-color: #e8eef2; }
+      body .menu ol li .nav-link {
+        text-decoration: none; }
+
+@keyframes slideLeft {
+  from {
+    left: -80%; }
+  to {
+    left: 0; } }
+  body .menuMask {
+    position: fixed;
+    background-color: #1888fb;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Webkit 35: */
+    /* Firefox 28, Opera 22, IE 11: */
+    animation: slideRight 0.2s ease-in-out; }
+
+@keyframes slideRight {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.4; } }
+  body .Home {
+    margin: 30px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  body .header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 0 2em 0; }
+  body .highlighted-currency {
+    position: relative;
+    background: linear-gradient(71.12deg, #1888fb 8.09%, #00e4ba 100%);
+    border-radius: 5px;
+    padding: 2em 0 2em 2em; }
+    body .highlighted-currency p {
+      font-size: 1em;
+      /* margin-left: 1em; */
+      color: #f4f8f9; }
+    body .highlighted-currency p:first-of-type {
+      display: inline;
+      margin-left: 1.5em; }
+    body .highlighted-currency h2 {
+      display: inline;
+      font-size: 2.5em;
+      font-weight: 400;
+      color: #f4f8f9; }
+    body .highlighted-currency img {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      border-radius: 5px; }
+  body footer {
+    background-color: #ffff;
+    width: 100%;
+    height: 48px;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 0 0;
+    font-size: 0.8em; }
+  body .list li {
+    margin: 0 0 0.5em 0; }
+    body .list li .card {
+      background-color: #ffff;
+      height: 4em;
+      border-radius: 5px;
+      position: relative;
+      width: 100%;
+      max-width: 700px; }
+      body .list li .card .card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 1em 0 1em; }
+        body .list li .card .card-body .card-text {
+          flex: 1 1;
+          grid-gap: 20px;
+          gap: 20px;
+          text-align: start; }
+  body .accordion {
+    width: 100%;
+    max-width: 700px;
+    color: #030303; }
+    body .accordion .accordionContent {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 600ms ease-in-out;
+      font-size: 0.7em; }
+    body .accordion .accordionContent.show {
+      margin: 18px auto;
+      height: 100px;
+      opacity: 1; }
+  body .accordion h3 {
+    text-transform: capitalize;
+    margin: 0 0 0.5em 0; }
+
+.standard-btn-coloured {
+  display: block;
+  text-align: center;
+  width: 80px;
+  text-decoration: none;
+  background: #1888fb;
+  border-radius: 2px;
+  padding: 10px 20px 10px 20px;
+  color: #ffff;
+  margin: 1em 0 0 0;
+  transition: 0.2s ease-in-out; }
+
+.standard-btn-coloured:hover {
+  color: #ffffff;
+  opacity: 0.8; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFBO0FBa0JBO0VBQ0UsU0FBUztFQUNULHFDQWpCa0MsRUFBQTs7QUFvQnBDO0VBQ0UscUJBQXFCO0VBQ3JCLFVBQVUsRUFBQTs7QUFHWjtFQUNFLHlCQUF5QjtFQW1MekIsc0JBQUE7RUFnQkEsdUJBQUEsRUFBd0I7RUFwTTFCO0lBSUksU0FBUztJQUNULFVBQVUsRUFBQTtFQUxkO0lBU0ksZ0JBQWdCO0lBQ2hCLGNBQWM7SUFDZCxZQUFZO0lBQ1osVUFBVTtJQUNWLGFBQWE7SUFDYixlQUFlO0lBQ2YsZ0JBQWdCLEVBQUE7RUFmcEI7SUFtQkksWUFBWTtJQUNaLGFBQWE7SUFDYiw4QkFBOEI7SUFDOUIsbUJBQW1CO0lBQ25CLHNCQUFzQjtJQUN0Qix1QkE5Q2UsRUFBQTtJQXNCbkI7TUEyQk0sWUFBWTtNQUNaLFlBQVksRUFBQTtFQTVCbEI7SUFpQ0ksdUJBdkRlO0lBd0RmLGVBQWU7SUFDZixNQUFNO0lBQ04sT0FBTztJQUNQLFVBQVU7SUFDVixZQUFZO0lBQ1osVUFBVTtJQUVWLHFDQUFxQyxFQUFBO0lBekN6QztNQTRDTSxTQUFTO01BQ1QsVUFBVTtNQUNWLHFCQUFxQjtNQUNyQix5QkFBeUI7TUFDekIsZ0JBQWdCO01BQ2hCLGdCQUFnQixFQUFBO0lBakR0QjtNQXFETSxrQkFBa0I7TUFDbEIsV0FBVztNQUNYLFVBQVU7TUFDVixZQUFZO01BQ1osWUFBWSxFQUFBO0lBekRsQjtNQTZETSxrQkFBa0I7TUFDbEIscUJBQXFCO01BQ3JCLFFBQVE7TUFDUixVQUFVO01BQ1YsV0FBVztNQUNYLFVBQVU7TUFDVixhQUFhO01BQ2Isc0JBQXNCO01BQ3RCLDhCQUE4QixFQUFBO01BckVwQztRQXdFUSxxQkFBcUI7UUFDckIsZ0JBQWdCLEVBQUE7TUF6RXhCO1FBNkVRLFlBQVk7UUFDWixjQWpHYTtRQWtHYiw0QkFBNEIsRUFBQTtNQS9FcEM7UUFtRlEsWUFB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RUEvUmhCO0lBb1NJLDBCQUEwQjtJQUMxQixtQkFBbUIsRUFBQTs7QUFJdkI7RUFDRSxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxxQkFBcUI7RUFDckIsbUJBalVtQjtFQWtVbkIsa0JBQWtCO0VBQ2xCLDRCQUE0QjtFQUM1QixZQXZVaUI7RUF3VWpCLGlCQUFpQjtFQUNqQiw0QkFBNEIsRUFBQTs7QUFHOUI7RUFDRSxjQUFjO0VBQ2QsWUFBWSxFQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLyogaW1wb3J0cyAqL1xuQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU1vbnRzZXJyYXQ6aXRhbCx3Z2h0QDAsMTAwOzAsMjAwOzAsMzAwOzAsNDAwOzAsNTAwOzAsNjAwOzAsNzAwOzAsODAwOzAsOTAwOzEsMTAwOzEsMjAwOzEsMzAwOzEsNDAwOzEsNTAwOzEsNjAwOzEsNzAwOzEsODAwOzEsOTAwJmRpc3BsYXk9c3dhcFwiKTtcbi8vIGZvbnRcbiRtYWluLWZvbnQ6IFwiTW9udHNlcnJhdFwiLCBzYW5zLXNlcmlmO1xuLy8gY29sb3JzXG4kYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjhmOTtcbiRsaWdodC1jb2xvcjogI2ZmZmY7XG4kaWNvbi1iYWNrZ3JvdW5kOiAjZThlZWYyO1xuJGNvbG9yOiAjMDMwMzAzO1xuJGJyYW5kLWNvbG9yOiAjMTg4OGZiO1xuLy8gYXJyYXlcbiRuYXYtaWNvbnM6IChcbiAgYW5hbHl0aWNzOiBcIi4vaW1hZ2VzL2FuYWx5dGljcy5zdmdcIixcbiAgbWFya2V0OiBcIi4vaW1hZ2VzL21hcmtldC5zdmdcIixcbiAgbmV3czogXCIuL2ltYWdlcy9uZXdzLnN2Z1wiLFxuICBjb21tdW5pdHk6IFwiLi9pbWFnZXMvZm9ydW0uc3ZnXCIsXG4pO1xuXG4qIHtcbiAgbWFyZ2luOiAwO1xuICBmb250LWZhbWlseTogJG1haW4tZm9udDtcbn1cblxub2wge1xuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gIHBhZGRpbmc6IDA7XG59XG5cbmJvZHkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmOGY5O1xuXG4gIHAge1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAwO1xuICB9XG5cbiAgYnV0dG9uIHtcbiAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgIGNvbG9yOiBpbmhlcml0O1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBwYWRkaW5nOiAwO1xuICAgIGZvbnQ6IGluaGVyaXQ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIG91dGxpbmU6IGluaGVyaXQ7XG4gIH1cblxuICBoZWFkZXIge1xuICAgIGhlaWdodDogNjRweDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDAgMzBweCAwIDMwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGxpZ2h0LWNvbG9yO1xuXG4gICAgYSBpbWcge1xuICAgICAgd2lkdGg6IDEzNXB4O1xuICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgIH1cbiAgfVxuXG4gIC5tZW51IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkbGlnaHQtY29sb3I7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiA3NSU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG4gICAgLXdlYmtpdC1hbmltYXRpb246IHNsaWRlTGVmdCAwLjJzIGVhc2UtaW4tb3V0O1xuICAgIGFuaW1hdGlvbjogc2xpZGVMZWZ0IDAuMnMgZWFzZS1pbi1vdXQ7XG5cbiAgICBwIHtcbiAgICAgIG1hcmdpbjogMDtcbiAgICAgIHBhZGRpbmc6IDA7XG4gICAgICBtYXJnaW46IDMwcHggMCAwIDMwcHg7XG4gICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgfVxuXG4gICAgaW1nIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjUlO1xuICAgICAgbGVmdDogMzBweDtcbiAgICAgIHdpZHRoOiAxMzVweDtcbiAgICAgIGhlaWdodDogYXV0bztcbiAgICB9XG5cbiAgICBvbCB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICB0b3A6IDE1JTtcbiAgICAgIGxlZnQ6IDMwcHg7XG4gICAgICBoZWlnaHQ6IDMwJTtcbiAgICAgIHBhZGRpbmc6IDA7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcblxuICAgICAgbGkge1xuICAgICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICB9XG5cbiAgICAgIGxpOmhvdmVyIHtcbiAgICAgICAgb3BhY2l0eTogMC44O1xuICAgICAgICBjb2xvcjogJGJyYW5kLWNvbG9yO1xuICAgICAgICB0cmFuc2l0aW9uOiAwLjJzIGVhc2UtaW4tb3V0O1xuICAgICAgfVxuXG4gICAgICBsaTpmaXJzdC1vZi10eXBlOjpiZWZvcmUge1xuICAgICAgICBjb250ZW50OiBcIiBcIjtcbiAgICAgICAgYmFja2dyb3VuZDogdXJsKG1hcC1nZXQoJG5hdi1pY29ucywgYW5hbHl0aWNzKSkgbm8tcmVwZWF0O1xuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IDI1cHggYXV0bztcbiAgICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAlO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDFlbTtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGljb24tYmFja2dyb3VuZDtcbiAgICAgIH1cblxuICAgICAgbGk6bnRoLW9mLXR5cGUoMik6OmJlZm9yZSB7XG4gICAgICAgIGNvbnRlbnQ6IFwiIFwiO1xuICAgICAgICBiYWNrZ3JvdW5kOiB1cmwobWFwLWdldCgkbmF2LWljb25zLCBtYXJrZXQpKSBuby1yZXBlYXQ7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogMjVweCBhdXRvO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMCU7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgICAgICB3aWR0aDogNDBweDtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkaWNvbi1iYWNrZ3JvdW5kO1xuICAgICAgfVxuXG4gICAgICBsaTpudGgtb2YtdHlwZSgzKTo6YmVmb3JlIHtcbiAgICAgICAgY29udGVudDogXCIgXCI7XG4gICAgICAgIGJhY2tncm91bmQ6IHVybChtYXAtZ2V0KCRuYXYtaWNvbnMsIG5ld3MpKSBuby1yZXBlYXQ7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogMjVweCBhdXRvO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMCU7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgICAgICB3aWR0aDogNDBweDtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkaWNvbi1iYWNrZ3JvdW5kO1xuICAgICAgfVxuXG4gICAgICBsaTpudGgtb2YtdHlwZSg0KTo6YmVmb3JlIHtcbiAgICAgICAgY29udGVudDogXCIgXCI7XG4gICAgICAgIGJhY2tncm91bmQ6IHVybChtYXAtZ2V0KCRuYXYtaWNvbnMsIGNvbW11bml0eSkpIG5vLXJlcGVhdDtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiAyNXB4IGF1dG87XG4gICAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRpY29uLWJhY2tncm91bmQ7XG4gICAgICB9XG5cbiAgICAgIGxpIC5uYXYtbGluayB7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICBAa2V5ZnJhbWVzIHNsaWRlTGVmdCB7XG4gICAgZnJvbSB7XG4gICAgICBsZWZ0OiAtODAlO1xuICAgIH1cbiAgICB0byB7XG4gICAgICBsZWZ0OiAwO1xuICAgIH1cbiAgfVxuXG4gIC5tZW51TWFzayB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRicmFuZC1jb2xvcjtcbiAgICBvcGFjaXR5OiAwLjQ7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIC8qIFdlYmtpdCAzNTogKi9cbiAgICAtd2Via2l0LWFuaW1hdGlvbjogc2xpZGVSaWdodCAwLjJzIGVhc2UtaW4tb3V0O1xuICAgIC8qIEZpcmVmb3ggMjgsIE9wZXJhIDIyLCBJRSAxMTogKi9cbiAgICBhbmltYXRpb246IHNsaWRlUmlnaHQgMC4ycyBlYXNlLWluLW91dDtcbiAgfVxuXG4gIEBrZXlmcmFtZXMgc2xpZGVSaWdodCB7XG4gICAgZnJvbSB7XG4gICAgICBvcGFjaXR5OiAwO1xuICAgIH1cbiAgICB0byB7XG4gICAgICBvcGFjaXR5OiAwLjQ7XG4gICAgfVxuICB9XG5cbiAgLyogY29udGVudCBjb250YWluZXIgKi9cbiAgLkhvbWUge1xuICAgIG1hcmdpbjogMzBweCAzMHB4IDAgMzBweDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICB9XG5cbiAgLmhlYWRlci10aXRsZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luOiAxLjVlbSAwIDJlbSAwO1xuICB9XG5cbiAgLyogY3VycmVuY3kgY29tcG9uZW50ICovXG4gIC5oaWdobGlnaHRlZC1jdXJyZW5jeSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg3MS4xMmRlZywgIzE4ODhmYiA4LjA5JSwgIzAwZTRiYSAxMDAlKTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcGFkZGluZzogMmVtIDAgMmVtIDJlbTtcblxuICAgIHAge1xuICAgICAgZm9udC1zaXplOiAxZW07XG4gICAgICAvKiBtYXJnaW4tbGVmdDogMWVtOyAqL1xuICAgICAgY29sb3I6ICRiYWNrZ3JvdW5kLWNvbG9yO1xuICAgIH1cblxuICAgIHA6Zmlyc3Qtb2YtdHlwZSB7XG4gICAgICBkaXNwbGF5OiBpbmxpbmU7XG4gICAgICBtYXJnaW4tbGVmdDogMS41ZW07XG4gICAgfVxuXG4gICAgaDIge1xuICAgICAgZGlzcGxheTogaW5saW5lO1xuICAgICAgZm9udC1zaXplOiAyLjVlbTtcbiAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgICBjb2xvcjogJGJhY2tncm91bmQtY29sb3I7XG4gICAgfVxuXG4gICAgaW1nIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMTAlO1xuICAgICAgcmlnaHQ6IDUlO1xuICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIH1cbiAgfVxuXG4gIGZvb3RlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGxpZ2h0LWNvbG9yO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogNDhweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYm90dG9tOiAwO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW46IDFlbSAwIDAgMDtcbiAgICBmb250LXNpemU6IDAuOGVtO1xuICB9XG5cbiAgLmxpc3Qge1xuICAgIGxpIHtcbiAgICAgIG1hcmdpbjogMCAwIDAuNWVtIDA7XG4gICAgICAuY2FyZCB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRsaWdodC1jb2xvcjtcbiAgICAgICAgaGVpZ2h0OiA0ZW07XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWF4LXdpZHRoOiA3MDBweDtcblxuICAgICAgICAuY2FyZC1ib2R5IHtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICBwYWRkaW5nOiAwIDFlbSAwIDFlbTtcblxuICAgICAgICAgIC5jYXJkLXRleHQge1xuICAgICAgICAgICAgZmxleDogMSAxO1xuICAgICAgICAgICAgZ2FwOiAyMHB4O1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogc3RhcnQ7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmFjY29yZGlvbiB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWF4LXdpZHRoOiA3MDBweDtcbiAgICBjb2xvcjogJGNvbG9yO1xuXG4gICAgLmFjY29yZGlvbkNvbnRlbnQge1xuICAgICAgaGVpZ2h0OiAwO1xuICAgICAgb3BhY2l0eTogMDtcbiAgICAgIC8vIGRpc3BsYXk6IGZsZXg7XG4gICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgdHJhbnNpdGlvbjogYWxsIDYwMG1zIGVhc2UtaW4tb3V0O1xuICAgICAgZm9udC1zaXplOiAwLjdlbTtcbiAgICB9XG5cbiAgICAuYWNjb3JkaW9uQ29udGVudC5zaG93IHtcbiAgICAgIG1hcmdpbjogMThweCBhdXRvO1xuICAgICAgaGVpZ2h0OiAxMDBweDtcbiAgICAgIG9wYWNpdHk6IDE7XG4gICAgfVxuICB9XG5cbiAgLmFjY29yZGlvbiBoMyB7XG4gICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgbWFyZ2luOiAwIDAgMC41ZW0gMDtcbiAgfVxufVxuXG4uc3RhbmRhcmQtYnRuLWNvbG91cmVkIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd2lkdGg6IDgwcHg7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgYmFja2dyb3VuZDogJGJyYW5kLWNvbG9yO1xuICBib3JkZXItcmFkaXVzOiAycHg7XG4gIHBhZGRpbmc6IDEwcHggMjBweCAxMHB4IDIwcHg7XG4gIGNvbG9yOiAkbGlnaHQtY29sb3I7XG4gIG1hcmdpbjogMWVtIDAgMCAwO1xuICB0cmFuc2l0aW9uOiAwLjJzIGVhc2UtaW4tb3V0O1xufVxuXG4uc3RhbmRhcmQtYnRuLWNvbG91cmVkOmhvdmVyIHtcbiAgY29sb3I6ICNmZmZmZmY7XG4gIG9wYWNpdHk6IDAuODtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style data-styled="active" data-styled-version="5.3.3">.hBeRhI{border-radius:5px;width:25px;height:25px;margin-right:1em;}.Rvjod{border-radius:5px;width:25px;height:25px;margin-right:1em;}.dpoZop{border-radius:5px;width:25px;height:25px;margin-right:1em;}</style><script charset="utf-8" src="./React App_files/main.e6f3b6fd9a7c51175340.hot-update.js"></script><script charset="utf-8" src="./React App_files/vendors_main.b18f045cd1045579f239.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.b18f045cd1045579f239.hot-update.js"></script><script charset="utf-8" src="./React App_files/vendors_main.d049c0704ab1b8a15d6a.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.d049c0704ab1b8a15d6a.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.5287b9b26081faa66a42.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.f89f0e4c02c9d4002430.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.8065f6ffef8880ba0bab.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.45c24c8982046840ea03.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.38e1178bc4285ad9b409.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.c88374430ca0eedc1063.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.7de11e354a72f9fe05b7.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.46410f093f544c6b015d.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.b631b77ef194ccdd77fe.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.d29a57bbd04297b13314.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.7db0eb7830ce33ae08cf.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.9197bcee569721c47384.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.8cbc1854bae094834475.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.ebf1fd15b8fec48f4ca2.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.d574336975b336acf0be.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.df48be479a85f9c0f43d.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.0f8dcd2ba51dcdf8be5b.hot-update.js"></script><script charset="utf-8" src="http://localhost:3001/main.2738079c2cf5179c8f79.hot-update.js"></script></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="App"><header class="mainHeader"><a href="http://localhost:3001/Market#"><img class="blueZilla" src="./React App_files/BlueZilla.17263031.svg" alt="logo"></a><nav><button><img class="Hamburger" src="./React App_files/Hamburger.9d1732f0.svg" alt="Hamburger"></button></nav></header><div class="content"><div class="Home"><div class="header-title"><h1>Market Prices</h1><p>Price changes of Bluezilla projects</p></div><div class="pricesList"><ol class="list"><li><div class="card"><div class="card-body"><img src="./React App_files/bscpad_logo.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Bscpad</p><p class="card-text">$2.1</p><p class="card-text" style="color: rgb(77, 218, 173);">0.13%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#4DDAAD" opacity="0.3" d="M50,25C45.61315899348086,25,41.22631798696172,25,36.839476980442576,25C31.778701931490446,25,26.71792688253832,25,21.657151833586187,25C18.6842246685655,25,15.711297503544808,25,12.738370338524119,25C8.492246892349414,25,4.246123446174706,25,0,25L0,12.5C4.246123446174706,12.202380952380953,8.492246892349414,11.904761904761905,12.738370338524119,10.714285714285715C15.711297503544808,9.880772734542877,18.6842246685655,8.151584733415238,21.657151833586187,7.142857142857142C26.71792688253832,5.425713352201754,31.778701931490446,3.5714285714285725,36.839476980442576,3.5714285714285725C41.22631798696172,3.5714285714285725,45.61315899348086,13.392857142857142,50,23.214285714285715Z"></path><path stroke-width="1" fill="none" stroke="#4DDAAD" d="M50,23.214285714285715C45.61315899348086,13.392857142857142,41.22631798696172,3.5714285714285725,36.839476980442576,3.5714285714285725C31.778701931490446,3.5714285714285725,26.71792688253832,5.425713352201754,21.657151833586187,7.142857142857142C18.6842246685655,8.151584733415238,15.711297503544808,9.880772734542877,12.738370338524119,10.714285714285715C8.492246892349414,11.904761904761905,4.246123446174706,12.202380952380953,0,12.5"></path></svg></div></div></div><div class="accordion"><div class="show accordionContent"><h3>bscpad</h3><p>The BSC Launch Pad is the first decentralized IDO platform for the Binance Smart Chain Network. BSCPad will empower crypto currency projects with the ability to distribute tokens and raise liquidity</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/Th98fbg__400x400.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Gamezone</p><p class="card-text">$0.96</p><p class="card-text" style="color: rgb(222, 62, 61);">-0.6%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#DE3E3D" opacity="0.3" d="M50,25C47.52132471752122,25,45.04264943504244,25,42.56397415256366,25C39.33948899321264,25,36.11500383386163,25,32.89051867451061,25C29.491161365160576,25,26.091804055810538,25,22.692446746460504,25C15.128297830973668,25,7.564148915486835,25,0,25L0,20.454545454545453C7.564148915486835,21.59090909090909,15.128297830973668,22.727272727272727,22.692446746460504,22.727272727272727C26.091804055810538,22.727272727272727,29.491161365160576,4.545454545454544,32.89051867451061,4.545454545454544C36.11500383386163,4.545454545454544,39.33948899321264,16.21077195026482,42.56397415256366,18.181818181818183C45.04264943504244,19.696969696969695,47.52132471752122,20.075757575757574,50,20.454545454545453Z"></path><path stroke-width="1" fill="none" stroke="#DE3E3D" d="M50,20.454545454545453C47.52132471752122,20.075757575757574,45.04264943504244,19.696969696969695,42.56397415256366,18.181818181818183C39.33948899321264,16.21077195026482,36.11500383386163,4.545454545454544,32.89051867451061,4.545454545454544C29.491161365160576,4.545454545454544,26.091804055810538,22.727272727272727,22.692446746460504,22.727272727272727C15.128297830973668,22.727272727272727,7.564148915486835,21.59090909090909,0,20.454545454545453"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>gamezone</h3><p>GameZone is on a mission to support the next generation of creators and innovators in the blockchain-based gaming space</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/EhSqPTtG_400x400.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Adapad</p><p class="card-text">$0.55</p><p class="card-text" style="color: rgb(222, 62, 61);">-2.19%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#DE3E3D" opacity="0.3" d="M50,25C45.233983252353646,25,40.4679665047073,25,35.701949757060945,25C31.829369291972828,25,27.95678882688471,25,24.084208361796595,25C19.445248669559355,25,14.806288977322112,25,10.167329285084872,25C6.7782195233899145,25,3.3891097616949573,25,0,25L0,10C3.3891097616949573,10,6.7782195233899145,10,10.167329285084872,10C14.806288977322112,10,19.445248669559355,10,24.084208361796595,10C27.95678882688471,10,31.829369291972828,13.473393292777114,35.701949757060945,15C40.4679665047073,16.87880747715541,45.233983252353646,18.439403738577706,50,20Z"></path><path stroke-width="1" fill="none" stroke="#DE3E3D" d="M50,20C45.233983252353646,18.439403738577706,40.4679665047073,16.87880747715541,35.701949757060945,15C31.829369291972828,13.473393292777114,27.95678882688471,10,24.084208361796595,10C19.445248669559355,10,14.806288977322112,10,10.167329285084872,10C6.7782195233899145,10,3.3891097616949573,10,0,10"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>adapad</h3><p>The first deflationary launchpad on the Cardano ecosystem. The main deflationary mechanisms of ADAPad include a 10% fee on all token sells and early unstaking fees of up to 25% Sell Fees distribution. 7.5% of the fees will be rewarded to stakers in ADA.</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/velas.png" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Velas</p><p class="card-text">$0.4</p><p class="card-text" style="color: rgb(77, 218, 173);">0.42%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#4DDAAD" opacity="0.3" d="M50,25C46.37271776125861,25,42.745435522517226,25,39.11815328377584,25C34.314015168639706,25,29.509877053503576,25,24.705738938367443,25C21.340304642947096,25,17.974870347526753,25,14.609436052106409,25C9.739624034737606,25,4.869812017368803,25,0,25L0,18.75C4.869812017368803,15.625,9.739624034737606,12.5,14.609436052106409,12.5C17.974870347526753,12.5,21.340304642947096,18.75,24.705738938367443,18.75C29.509877053503576,18.75,34.314015168639706,18.75,39.11815328377584,18.75C42.745435522517226,18.75,46.37271776125861,18.75,50,18.75Z"></path><path stroke-width="1" fill="none" stroke="#4DDAAD" d="M50,18.75C46.37271776125861,18.75,42.745435522517226,18.75,39.11815328377584,18.75C34.314015168639706,18.75,29.509877053503576,18.75,24.705738938367443,18.75C21.340304642947096,18.75,17.974870347526753,12.5,14.609436052106409,12.5C9.739624034737606,12.5,4.869812017368803,15.625,0,18.75"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>velas</h3><p>Velas coin (VLX) is used for transactions, payments, fees and for supporting Proof-of-Stake consensus. Staking allows block producers (validators and their delegators) to provide transaction consensus and receive staking incentives for honest block production</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/nftl.PNG" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Nftlaunch</p><p class="card-text">$0.26</p><p class="card-text" style="color: rgb(222, 62, 61);">-2.8%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#DE3E3D" opacity="0.3" d="M50,25C49.99170536043265,25,49.983410720865294,25,49.97511608129794,25C43.62615157245993,25,37.27718706362192,25,30.928222554783915,25C25.044601877673568,25,19.16098120056322,25,13.277360523452874,25C8.851573682301915,25,4.425786841150958,25,0,25L0,7.142857142857142C4.425786841150958,9.842658444412722,8.851573682301915,12.542459745968301,13.277360523452874,14.285714285714285C19.16098120056322,16.603188855467543,25.044601877673568,16.708634658905382,30.928222554783915,17.857142857142858C37.27718706362192,19.096488183582306,43.62615157245993,21.42857142857143,49.97511608129794,21.42857142857143C49.983410720865294,21.42857142857143,49.99170536043265,21.42857142857143,50,21.42857142857143Z"></path><path stroke-width="1" fill="none" stroke="#DE3E3D" d="M50,21.42857142857143C49.99170536043265,21.42857142857143,49.983410720865294,21.42857142857143,49.97511608129794,21.42857142857143C43.62615157245993,21.42857142857143,37.27718706362192,19.096488183582306,30.928222554783915,17.857142857142858C25.044601877673568,16.708634658905382,19.16098120056322,16.603188855467543,13.277360523452874,14.285714285714285C8.851573682301915,12.542459745968301,4.425786841150958,9.842658444412722,0,7.142857142857142"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>nftlaunch</h3><p>NFTLaunch is the FIRST Deflationary Marketplace, Charity, and. NFTLaunch Pad all in ONE convenient package! Deflationary</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/Mypk8PG_-_Imgur.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Pulsepad</p><p class="card-text">$0.25</p><p class="card-text" style="color: rgb(77, 218, 173);">0.28%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#4DDAAD" opacity="0.3" d="M50,25C44.5836637877884,25,39.16732757557681,25,33.750991363365216,25C29.75812326440315,25,25.765255165441086,25,21.77238706647902,25C17.69460184162666,25,13.616816616774301,25,9.539031391921942,25C6.359354261281295,25,3.179677130640647,25,0,25L0,16.666666666666668C3.179677130640647,16.666666666666668,6.359354261281295,16.666666666666668,9.539031391921942,16.666666666666668C13.616816616774301,16.666666666666668,17.69460184162666,16.666666666666668,21.77238706647902,16.666666666666668C25.765255165441086,16.666666666666668,29.75812326440315,16.666666666666668,33.750991363365216,16.666666666666668C39.16732757557681,16.666666666666668,44.5836637877884,16.666666666666668,50,16.666666666666668Z"></path><path stroke-width="1" fill="none" stroke="#4DDAAD" d="M50,16.666666666666668C44.5836637877884,16.666666666666668,39.16732757557681,16.666666666666668,33.750991363365216,16.666666666666668C29.75812326440315,16.666666666666668,25.765255165441086,16.666666666666668,21.77238706647902,16.666666666666668C17.69460184162666,16.666666666666668,13.616816616774301,16.666666666666668,9.539031391921942,16.666666666666668C6.359354261281295,16.666666666666668,3.179677130640647,16.666666666666668,0,16.666666666666668"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>pulsepad</h3><p>PulsePad is the premier IDO platform for projects building on PulseChain — a new Ethereum sister chain designed to provide an idyllic environment for building powerful new applications, while simultaneously reducing the load on the Ethereum network.</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/kcc.png" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Kccpad</p><p class="card-text">$0.23</p><p class="card-text" style="color: rgb(77, 218, 173);">1.19%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#4DDAAD" opacity="0.3" d="M50,25C49.99306255385649,25,49.98612510771298,25,49.97918766156947,25C43.9257993479612,25,37.872411034352936,25,31.819022720744666,25C24.8291603174835,25,17.839297914222332,25,10.849435510961165,25C7.2329570073074425,25,3.6164785036537217,25,0,25L0,18.75C3.6164785036537217,15.625,7.2329570073074425,12.5,10.849435510961165,12.5C17.839297914222332,12.5,24.8291603174835,12.5,31.819022720744666,12.5C37.872411034352936,12.5,43.9257993479612,12.5,49.97918766156947,12.5C49.98612510771298,12.5,49.99306255385649,12.5,50,12.5Z"></path><path stroke-width="1" fill="none" stroke="#4DDAAD" d="M50,12.5C49.99306255385649,12.5,49.98612510771298,12.5,49.97918766156947,12.5C43.9257993479612,12.5,37.872411034352936,12.5,31.819022720744666,12.5C24.8291603174835,12.5,17.839297914222332,12.5,10.849435510961165,12.5C7.2329570073074425,12.5,3.6164785036537217,15.625,0,18.75"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>kccpad</h3><p>KCCPAD IS THE FIRST DECENTRALIZED &amp; DEFLATIONARY IDO PLATFORM FOR THE KUCOIN COMMUNITY CHAIN. KCCPAD is a deflationary launch pad, there is a 1% fee for selling, a 25% fee for early unstaking and projects will need to commit to buying and burning tokens to launch their IDOs.</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/weUUiy33_400x400.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Tronpad</p><p class="card-text">$0.14</p><p class="card-text" style="color: rgb(222, 62, 61);">-0.29%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#DE3E3D" opacity="0.3" d="M50,25C44.935248473725984,25,39.87049694745197,25,34.80574542117795,25C30.737188396187136,25,26.668631371196316,25,22.6000743462055,25C19.39824784077856,25,16.196421335351623,25,12.994594829924683,25C8.663063219949787,25,4.331531609974895,25,0,25L0,10C4.331531609974895,10,8.663063219949787,10,12.994594829924683,10C16.196421335351623,10,19.39824784077856,10,22.6000743462055,10C26.668631371196316,10,30.737188396187136,20,34.80574542117795,20C39.87049694745197,20,44.935248473725984,17.5,50,15Z"></path><path stroke-width="1" fill="none" stroke="#DE3E3D" d="M50,15C44.935248473725984,17.5,39.87049694745197,20,34.80574542117795,20C30.737188396187136,20,26.668631371196316,10,22.6000743462055,10C19.39824784077856,10,16.196421335351623,10,12.994594829924683,10C8.663063219949787,10,4.331531609974895,10,0,10"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>tronpad</h3><p>TRONPAD IS THE FIRST LAUNCHPAD BUILT ON AND PARTNERED WITH THE TRON NETWORK. TRONPAD will empower crypto currency projects with the ability to distribute tokens and raise liquidity.</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li><li><div class="card"><div class="card-body"><img src="./React App_files/tHAbIBQK_400x400.jpg" alt="coin-icon" class="sc-dkPtRN dpoZop"><p class="card-text">Ethpad</p><p class="card-text">$0.12</p><p class="card-text" style="color: rgb(222, 62, 61);">-0.15%</p><div><svg viewBox="-8 -5 37 35" width="45" height="45">// area and line paths<path fill="#DE3E3D" opacity="0.3" d="M50,25C49.98497846386082,25,49.96995692772163,25,49.95493539158245,25C42.957780874615324,25,35.96062635764819,25,28.96347184068106,25C21.831949243722754,25,14.700426646764448,25,7.568904049806142,25C5.045936033204095,25,2.5229680166020474,25,0,25L0,18.75C2.5229680166020474,18.75,5.045936033204095,18.75,7.568904049806142,18.75C14.700426646764448,18.75,21.831949243722754,18.75,28.96347184068106,18.75C35.96062635764819,18.75,42.957780874615324,12.5,49.95493539158245,12.5C49.96995692772163,12.5,49.98497846386082,12.5,50,12.5Z"></path><path stroke-width="1" fill="none" stroke="#DE3E3D" d="M50,12.5C49.98497846386082,12.5,49.96995692772163,12.5,49.95493539158245,12.5C42.957780874615324,12.5,35.96062635764819,18.75,28.96347184068106,18.75C21.831949243722754,18.75,14.700426646764448,18.75,7.568904049806142,18.75C5.045936033204095,18.75,2.5229680166020474,18.75,0,18.75"></path></svg></div></div></div><div class="accordion"><div class=" accordionContent"><h3>ethpad</h3><p>ETHPad (ETHPAD) is a relatively new platform that provides complete access to cross-chain launches. It claims to be the world's first deflationary and decentralized IDO platform, modeled around EIP-1559.</p><a href="http://localhost:3001/Market#" class="standard-btn-coloured btn-lg">Lean More</a></div></div></li></ol></div></div></div><footer>©<span>2021</span> By Tristan Varewijck</footer></div></div>
+  <script src="./React App_files/d3.v6.min.js"></script>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+<script src="./React App_files/bundle.js"></script><script src="./React App_files/vendors_main.chunk.js"></script><script src="./React App_files/main.chunk.js"></script>
+
+</body></html>

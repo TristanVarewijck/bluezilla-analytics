@@ -1,0 +1,38 @@
+{
+    "bscpad": {
+        "text": "The BSC Launch Pad is the first decentralized IDO platform for the Binance Smart Chain Network. BSCPad will empower crypto currency projects with the ability to distribute tokens and raise liquidity",
+        "url": "https://bscpad.com/"
+    },
+    "ethpad": {
+        "text": "ETHPad (ETHPAD) is a relatively new platform that provides complete access to cross-chain launches. It claims to be the world's first deflationary and decentralized IDO platform, modeled around EIP-1559.",
+        "url": "https://ethpad.network/"
+    },
+    "gamezone": {
+        "text": "GameZone is on a mission to support the next generation of creators and innovators in the blockchain-based gaming space",
+        "url": "https://gamezone.io/"
+    },
+    "adapad": {
+        "text": "The first deflationary launchpad on the Cardano ecosystem. The main deflationary mechanisms of ADAPad include a 10% fee on all token sells and early unstaking fees of up to 25% Sell Fees distribution. 7.5% of the fees will be rewarded to stakers in ADA.",
+        "url": "https://adapad.io/"
+    },
+    "kccpad": {
+        "text": "KCCPAD IS THE FIRST DECENTRALIZED & DEFLATIONARY IDO PLATFORM FOR THE KUCOIN COMMUNITY CHAIN. KCCPAD is a deflationary launch pad, there is a 1% fee for selling, a 25% fee for early unstaking and projects will need to commit to buying and burning tokens to launch their IDOs.",
+        "url": "https://kccpad.io/"
+    },
+    "nftlaunch": {
+        "text": "NFTLaunch is the FIRST Deflationary Marketplace, Charity, and. NFTLaunch Pad all in ONE convenient package! Deflationary",
+        "url": "https://nftlaunch.network/"
+    },
+    "pulsepad": {
+        "text": "PulsePad is the premier IDO platform for projects building on PulseChain — a new Ethereum sister chain designed to provide an idyllic environment for building powerful new applications, while simultaneously reducing the load on the Ethereum network.",
+        "url": "https://pulsepad.io/"
+    },
+    "tronpad": {
+        "text": "TRONPAD IS THE FIRST LAUNCHPAD BUILT ON AND PARTNERED WITH THE TRON NETWORK. TRONPAD will empower crypto currency projects with the ability to distribute tokens and raise liquidity.",
+        "url": "https://tronpad.network/"
+    },
+    "velas": {
+        "text": "Velas coin (VLX) is used for transactions, payments, fees and for supporting Proof-of-Stake consensus. Staking allows block producers (validators and their delegators) to provide transaction consensus and receive staking incentives for honest block production",
+        "url": "https://velas.com/"
+    }
+}
