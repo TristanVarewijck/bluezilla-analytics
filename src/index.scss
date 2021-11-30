@@ -235,10 +235,6 @@ body {
   /* content container */
   .Home {
     margin: 30px 30px 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
   }
 
   .header-title {
@@ -307,15 +303,19 @@ body {
 
         .card-body {
           display: flex;
-          justify-content: space-between;
+          flex-direction: row;
           align-items: center;
+          align-content: center;
+          justify-content: center;
           height: 100%;
-          padding: 0 1em 0 1em;
-
+          font-size: 0.8em;
+          text-transform: capitalize;
+          margin: 0 16px 0 16px;
           .card-text {
-            flex: 1 1;
-            gap: 20px;
-            text-align: start;
+            // flex: 1 1;
+            width: 25%;
+            align-content: center;
+            // gap: 20px;
           }
         }
       }
@@ -349,7 +349,6 @@ body {
     .accordionContent {
       height: 0px;
       opacity: 0;
-      // display: flex;
       overflow: hidden;
       transition: all 600ms ease-in-out;
       font-size: 0.7em;
@@ -365,5 +364,57 @@ body {
   .accordion h3 {
     text-transform: capitalize;
     margin: 0 0 0.5em 0;
+  }
+
+  .InfoBar {
+    background-color: $light-color;
+    height: 2em;
+    border-radius: 2px;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 1em;
+
+    .card {
+      background-color: $light-color;
+      border-radius: 5px;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      .card-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 0.8em;
+        text-transform: capitalize;
+        margin: 0 16px 0 16px;
+        .card-text {
+          width: 25%;
+          text-align: center;
+          // gap: 20px;
+        }
+      }
+    }
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    img {
+      margin-right: 1em;
+    }
+  }
+
+  .svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 }

@@ -10,7 +10,6 @@ const TokenIcon = styled.img`
 border-radius: 5px; 
 width: 25px; 
 height: 25px; 
-margin-right: 1em;
 `
 
 // compenent function
@@ -39,21 +38,15 @@ const PriceChangesList = () => {
 
                     // sort from high - low 
                     coinsArray = coinsArray.sort((a, b) => (a.current_price > b.current_price) ? -1 : ((b.current_price > a.current_price) ? 1 : 0))
-
                     setCoins(coinsArray)
-
-
                 })
                 .catch(err => {
                     console.log(err)
                 })
-
             // interval of 1000ms
         }, 1000);
         return () => clearInterval(interval);
-
     }, [])
-
     // Inline Data cleaning SUPERHANDIG!
     return (
         <div className="pricesList">
@@ -65,10 +58,9 @@ const PriceChangesList = () => {
                     <li key={coin.id} onClick={() => setActive(coin.id)}>
                         <Card>
                             <Card.Body>
-                                <TokenIcon src={coin.image} alt="coin-icon" />
-
                                 {/* Set every name to capitlize */}
-                                < Card.Text >
+                                < Card.Text className="group" >
+                                    <TokenIcon src={coin.image} alt="coin-icon" />
                                     {coin.id.charAt(0).toUpperCase() + coin.id.slice(1)}
                                 </Card.Text>
 
@@ -79,9 +71,13 @@ const PriceChangesList = () => {
 
                                 {/*  */}
                                 {coin.price_change_percentage_1h_in_currency > 0 ?
-                                    <Card.Text style={statusPostive}>{Math.round(coin.price_change_percentage_1h_in_currency * 100) / 100}%</Card.Text>
+                                    <Card.Text style={statusPostive}>
+                                        {Math.round(coin.price_change_percentage_1h_in_currency * 100) / 100}%
+                                    </Card.Text>
                                     :
-                                    <Card.Text style={statusNegative}>{Math.round(coin.price_change_percentage_1h_in_currency * 100) / 100}%</Card.Text>
+                                    <Card.Text style={statusNegative}>
+                                        {Math.round(coin.price_change_percentage_1h_in_currency * 100) / 100}%
+                                    </Card.Text>
                                 }
 
                                 {coin.price_change_percentage_1h_in_currency > 0 ?

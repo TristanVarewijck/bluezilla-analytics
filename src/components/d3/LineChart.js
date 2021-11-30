@@ -13,7 +13,7 @@ const LineChart = (props) => {
     const [data, setData] = React.useState([]);
 
     React.useEffect(() => {
-        d3.json(`https://api.coingecko.com/api/v3/coins/${value}/market_chart?vs_currency=usd&days=1&interval=Hourly`).then((d) => {
+        d3.json(`https://api.coingecko.com/api/v3/coins/${value}/market_chart?vs_currency=usd&days=1&interval=1h`).then((d) => {
             d = (d.prices.slice(1).slice(-15));
             d = d.reverse();
             let parse = d3.timeParse("%s");
@@ -56,7 +56,7 @@ const LineChart = (props) => {
         .curve(d3.curveMonotoneX)(data);
 
     return (
-        <div>
+        <div className="svg-container">
             <svg
                 viewBox="-8 -5 37 35"
                 width="45" height="45">
