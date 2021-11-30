@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+## Functional programming
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Shields that represent my project - They change over time._ (https://shields.io/)
 
-## Available Scripts
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/functional-programming) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/functional-programming) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/functional-programming) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/functional-programming?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
-In the project directory, you can run:
+## Description
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Install](#install)
+- [Used Tools](#used-tools)
+- [Visuals](#visuals)
+- [!important files](#mportant-files)
+- [Meta](#meta)
+- [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Install
 
-### `yarn test`
+Clone the GitHub Repo locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/TristanVarewijck/functional-programming
+```
 
-### `yarn build`
+Install the Packages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn add 
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the Server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn run start
+```
 
-### `yarn eject`
+### .env Sample
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You need the following keys to make a connection to the API. :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+API_URL='https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=1&page=1&sparkline=false&price_change_percentage=24h'
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Used Tools
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [git](https://git-scm.com/)
+- [ejs](https://pugjs.org/api/getting-started.html)
+- [json](https://www.json.org/json-en.html)
+- [node](https://nodejs.org/en/)
 
-## Learn More
+## Visuals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+These are the current visuals
+NO VISUALS YET!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## !mportant files
 
-### Code Splitting
+Of course all files are important but you should at least have a look at these files if you are interested in this repo.
+Viewing these files will give you an idea of how this software is built.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[index.js](https://github.com/TristanVarewijck/functional-programming/blob/master/index.js) :page_facing_up:
 
-### Analyzing the Bundle Size
+[crypto.js](https://github.com/TristanVarewijck/functional-programming/blob/master/modules/crypto.js) :page_facing_up:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[color-data.js](https://github.com/TristanVarewijck/functional-programming/blob/master/modules/color-data.js) :page_facing_up:
 
-### Making a Progressive Web App
+[index.ejs](https://github.com/TristanVarewijck/functional-programming/blob/master/views/index.ejs) :page_facing_up:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[package.json](https://github.com/TristanVarewijck/functional-programming/blob/master/package.json) :page_facing_up:
 
-### Advanced Configuration
+## Meta
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVarewijck/functional-programming
 
-### Deployment
+![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/functional-programming/blob/master/LICENSE) for the full details.

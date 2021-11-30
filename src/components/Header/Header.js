@@ -8,9 +8,11 @@ const Header = () => {
     return (
         <header className="mainHeader">
             <a href="/" ><img className="blueZilla" src={BlueZilla} alt="logo" /></a>
+            <div>
+                <CurrencyChanger />
+                <Navbar />
+            </div>
 
-            <CurrencyChanger />
-            <Navbar />
         </header>
     );
 }

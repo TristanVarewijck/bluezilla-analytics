@@ -43,6 +43,7 @@ body {
     cursor: pointer;
     outline: inherit;
   }
+
   .content {
     display: flex;
     justify-content: center;
@@ -55,6 +56,27 @@ body {
     align-items: center;
     padding: 0 30px 0 30px;
     background-color: $light-color;
+
+    #currency-changer {
+      // turn off basic styles
+      border: none;
+      background-color: $light-color;
+      font-size: 0.9em;
+    }
+
+    #currency-changer:focus {
+      outline: $light-color;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div.changer-container {
+        margin: 0 1em 0 0;
+      }
+    }
 
     a img {
       width: 135px;
@@ -305,6 +327,25 @@ body {
     max-width: 700px;
     color: $color;
 
+    .standard-btn-coloured {
+      display: block;
+      text-align: center;
+      width: 80px;
+      text-decoration: none;
+      background: $brand-color;
+      border-radius: 2px;
+      padding: 10px 20px 10px 20px;
+      color: $light-color;
+      font-weight: 500;
+      margin: 1.5em 0 0 0;
+      transition: 0.2s ease-in-out;
+    }
+
+    .standard-btn-coloured:hover {
+      color: #ffffff;
+      opacity: 0.8;
+    }
+
     .accordionContent {
       height: 0px;
       opacity: 0;
@@ -325,23 +366,4 @@ body {
     text-transform: capitalize;
     margin: 0 0 0.5em 0;
   }
-}
-
-.standard-btn-coloured {
-  display: block;
-  text-align: center;
-  width: 80px;
-  text-decoration: none;
-  background: $brand-color;
-  border-radius: 2px;
-  padding: 10px 20px 10px 20px;
-  color: $light-color;
-  font-weight: 500;
-  margin: 1.5em 0 0 0;
-  transition: 0.2s ease-in-out;
-}
-
-.standard-btn-coloured:hover {
-  color: #ffffff;
-  opacity: 0.8;
 }

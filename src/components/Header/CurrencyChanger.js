@@ -1,10 +1,11 @@
-import dollar from "../../images/Dollar.svg";
-import euro from "../../images/Euro.svg";
-
 const currencyChanger = () => {
     return (
         <div className="changer-container">
-            <img src={dollar} alt="dollar" />
+            <select id="currency-changer" class="form-select" aria-label="Default select example">
+                <option value="usd" selected>USD</option>
+                <option value="eur">EUR</option>
+                <option value="jpy">JPY</option>
+            </select>
         </div>
     );
 }
