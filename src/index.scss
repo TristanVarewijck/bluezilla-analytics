@@ -235,6 +235,10 @@ body {
   /* content container */
   .Home {
     margin: 30px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 
   .header-title {
@@ -303,19 +307,16 @@ body {
 
         .card-body {
           display: flex;
-          flex-direction: row;
+          justify-content: space-between;
           align-items: center;
-          align-content: center;
-          justify-content: center;
           height: 100%;
-          font-size: 0.8em;
-          text-transform: capitalize;
-          margin: 0 16px 0 16px;
+          padding: 0 1em 0 1em;
+
           .card-text {
-            // flex: 1 1;
-            width: 25%;
-            align-content: center;
-            // gap: 20px;
+            flex: 1 1;
+            gap: 20px;
+            text-align: start;
+            vertical-align: center;
           }
         }
       }
@@ -349,6 +350,7 @@ body {
     .accordionContent {
       height: 0px;
       opacity: 0;
+
       overflow: hidden;
       transition: all 600ms ease-in-out;
       font-size: 0.7em;
@@ -384,37 +386,13 @@ body {
       max-width: 700px;
       .card-body {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        align-content: center;
-        justify-content: center;
         height: 100%;
-        width: 100%;
+        padding: 0 1em 0 1em;
         font-size: 0.8em;
         text-transform: capitalize;
-        margin: 0 16px 0 16px;
-        .card-text {
-          width: 25%;
-          text-align: center;
-          // gap: 20px;
-        }
       }
     }
-  }
-
-  .group {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-
-    img {
-      margin-right: 1em;
-    }
-  }
-
-  .svg-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
   }
 }

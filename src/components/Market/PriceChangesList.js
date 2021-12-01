@@ -9,7 +9,8 @@ import Accordion from "./Accordion";
 const TokenIcon = styled.img`
 border-radius: 5px; 
 width: 25px; 
-height: 25px; 
+height: 25px;
+margin-right: .5em; 
 `
 
 // compenent function
@@ -58,9 +59,9 @@ const PriceChangesList = () => {
                     <li key={coin.id} onClick={() => setActive(coin.id)}>
                         <Card>
                             <Card.Body>
+                                <TokenIcon src={coin.image} alt="coin-icon" />
                                 {/* Set every name to capitlize */}
                                 < Card.Text className="group" >
-                                    <TokenIcon src={coin.image} alt="coin-icon" />
                                     {coin.id.charAt(0).toUpperCase() + coin.id.slice(1)}
                                 </Card.Text>
 
