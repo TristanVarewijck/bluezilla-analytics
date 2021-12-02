@@ -39,14 +39,6 @@ Start the Server
 npm run start
 ```
 
-### .env Sample
-
-You need the following keys to make a connection to the API. :
-
-```
-API_URL='https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=1&page=1&sparkline=false&price_change_percentage=24h'
-```
-
 ## Used Tools
 
 - [git](https://git-scm.com/)
@@ -57,14 +49,11 @@ API_URL='https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=ma
 
 ## Visuals
 
-These are the current visuals
-NO VISUALS YET!
-
 Screenshot app: 
-![app](./src/images/screen-shot-app.png)
+![app](./src/images/screen-shot-app.png =250x)
 
 Screenshot accordion: 
-![Accordion](./src/images/screen-shot-accordion.png)
+![Accordion](./src/images/screen-shot-accordion.png =250x)
 
 ## !mportant files
 
