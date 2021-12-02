@@ -50,10 +50,10 @@ npm run start
 ## Visuals
 
 Screenshot app: 
-![app](./src/images/screen-shot-app.png =250x)
+![app](./src/images/screen-shot-app.png)
 
 Screenshot accordion: 
-![Accordion](./src/images/screen-shot-accordion.png =250x)
+![Accordion](./src/images/screen-shot-accordion.png)
 
 ## !mportant files
 
