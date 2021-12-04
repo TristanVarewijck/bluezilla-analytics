@@ -6,7 +6,7 @@ const width = 45;
 const height = 25;
 
 const LineChart = (props) => {
-    const value = props.value;
+    const value = props.value.toLowerCase();
     const color = props.color;
     const trigger = props.trigger
     // create chart 
